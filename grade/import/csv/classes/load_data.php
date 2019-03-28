@@ -400,8 +400,8 @@ class gradeimport_csv_load_data {
             default:
                 // Existing grade items.
                 if (!empty($map[$key])) {
-                    // Ignore import if the student ID is empty
-                    if($map[0] == 'userid' && $value == ''){
+                    // Ignore import if the student ID is empty.
+                    if ($map[0] == 'userid' && $value == ''){
                         break;
                     }
                     $this->newgrades = $this->update_grade_item($courseid, $map, $key, $verbosescales, $value,
